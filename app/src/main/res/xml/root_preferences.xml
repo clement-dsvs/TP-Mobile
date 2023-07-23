@@ -1,0 +1,13 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Font">
+
+    </PreferenceCategory>
+    <EditTextPreference
+        android:defaultValue="12"
+        android:key="font_size"
+        android:inputType="number"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Font Size" />
+</PreferenceScreen>
