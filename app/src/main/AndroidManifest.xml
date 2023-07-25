@@ -13,7 +13,16 @@
         android:theme="@style/Theme.TPMobile"
         tools:targetApi="31">
         <activity
-            android:name=".KgLb_activity"
+            android:name=".MphKphActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MetresPoucesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MetresPiedsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KgLbActivity"
             android:exported="false" />
         <activity
             android:name=".SettingsActivity"

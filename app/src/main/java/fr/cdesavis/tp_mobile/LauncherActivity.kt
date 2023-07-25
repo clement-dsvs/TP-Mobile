@@ -3,13 +3,11 @@ package fr.cdesavis.tp_mobile
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import androidx.preference.PreferenceManager
 
-import fr.cdesavis.tp_mobile.SettingsActivity
 import fr.cdesavis.tp_mobile.databinding.ActivityLauncherBinding
 
 class LauncherActivity : AppCompatActivity() {
@@ -21,8 +19,17 @@ class LauncherActivity : AppCompatActivity() {
         setContentView(R.layout.activity_launcher)
 
 
-        val btn_kg_livrees = findViewById<Button>(R.id.btn_kg_livres)
-        btn_kg_livrees.setOnClickListener { startActivity(Intent(this, KgLb_activity::class.java)) }
+        val btn_kg_livres = findViewById<Button>(R.id.btn_kg_livres)
+        btn_kg_livres.setOnClickListener { startActivity(Intent(this, KgLbActivity::class.java)) }
+
+        val btn_metres_pieds = findViewById<Button>(R.id.btn_m_pieds)
+        btn_metres_pieds.setOnClickListener { startActivity(Intent(this, MetresPiedsActivity::class.java)) }
+
+        val btn_metres_pouces = findViewById<Button>(R.id.btn_metres_pouces)
+        btn_metres_pouces.setOnClickListener { startActivity(Intent(this, MetresPoucesActivity::class.java)) }
+
+        val btn_mph_kph = findViewById<Button>(R.id.btn_mph_kph)
+        btn_mph_kph.setOnClickListener { startActivity(Intent(this, MphKphActivity::class.java)) }
 
         val settings_btn: View = findViewById(R.id.floatingActionButton)
         settings_btn.setOnClickListener{startSettingActivity()}
@@ -33,8 +40,6 @@ class LauncherActivity : AppCompatActivity() {
 
         binding = ActivityLauncherBinding.inflate(layoutInflater)
         binding.apply {
-
-
             if(enabled) {
                 textView.text = "Checked"
             }

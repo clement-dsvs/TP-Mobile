@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".KgLbActivity">
-
+    tools:context=".MetresPoucesActivity">
     <EditText
         android:id="@+id/txtMph"
         android:layout_width="wrap_content"
@@ -36,7 +35,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="125dp"
         android:layout_marginBottom="131dp"
-        android:text="Kilogrammes :"
+        android:text="Metres :"
         app:layout_constraintBottom_toBottomOf="@+id/txtKph"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -47,9 +46,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="243dp"
         android:layout_marginEnd="7dp"
-        android:text="Livres :"
+        android:text="Pouces :"
         app:layout_constraintEnd_toStartOf="@+id/txtKph"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

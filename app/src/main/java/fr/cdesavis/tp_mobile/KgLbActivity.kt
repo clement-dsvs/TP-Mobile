@@ -1,15 +1,15 @@
 package fr.cdesavis.tp_mobile
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.EditText
 import androidx.core.widget.doOnTextChanged
 
-class KgLb_activity : AppCompatActivity() {
+class KgLbActivity : AppCompatActivity() {
 
+    private lateinit var txtKg: EditText
+    private lateinit var txtLivre: EditText
     val ratio = 2.20462
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,14 +17,18 @@ class KgLb_activity : AppCompatActivity() {
         setContentView(R.layout.activity_kg_lb)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val txtKg = findViewById<EditText>(R.id.txtKg)
-        val txtLivre = findViewById<EditText>(R.id.txtLivre)
+        this.txtKg = findViewById<EditText>(R.id.txtMph)
+        this.txtLivre = findViewById<EditText>(R.id.txtKph)
 
 
         txtKg.doOnTextChanged { text: CharSequence?, start, before, count ->
-            print(start)
+            if (!txtKg.isFocused) return@doOnTextChanged;
+            txtLivre.setText(
+                livre_to_kg(text)
+            )
         }
         txtLivre.doOnTextChanged { text: CharSequence?, start, before, count ->
+            if (!txtLivre.isFocused) return@doOnTextChanged;
             txtKg.setText(
                 livre_to_kg(text)
             )
